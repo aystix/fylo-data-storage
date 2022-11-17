@@ -10,7 +10,7 @@ body {
     font-family: 'Raleway', sans-serif;
     background-image: url(./images/bg-desktop.png);
     background-repeat: no-repeat;
-    background-position-y: 350px;
+    background-position-y: 300px;
 
 }
 .img {
@@ -75,9 +75,10 @@ width: 150px;
 }
 .wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-end;
-    margin-top: 20%;
+    margin-top: 15%;
+    gap: 1.6rem;
 }
 p {
     color:hsl(243, 100%, 93%) ;
@@ -109,7 +110,19 @@ h2 {
 @media (max-width:480px) {
     .wrapper {
         flex-direction: column;
-        align-items: center;
+        align-items: center;   
+    }
+    .container1{
+        width: 90%;
+    }
+    .container2{
+        width: 90%;
         
     }
+    .progress-bar {
+        width: 100%;
+    }
+    
+    
+    
 }
