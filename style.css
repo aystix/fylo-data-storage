@@ -43,7 +43,7 @@ width: 150px;
     width: 400px;
     padding: 20px;
     border-radius: 10px;
-    
+    position: relative;
 }
 #logo {
     width: 7rem;
@@ -71,7 +71,7 @@ width: 150px;
 .gb {
     display: flex;
     justify-content: space-between;
-    width: 350px;
+    width: 100%;
 }
 .wrapper {
     display: flex;
@@ -94,13 +94,33 @@ span {
      margin-bottom: 4px;
 }
 .box {
+    position: relative;
     background-color: white;
     color:hsl(229, 57%, 11%) ;
     width: 150px;
     height: 60px;
     padding: 5px;
-    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     
+}
+.box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-top: 15px solid white;
+    bottom: -15px;
+    right: 0px;
+
+}
+.bubble-speech {
+    position: absolute;
+    top: -45px;
+    right: 25px;
 }
 h2 {
     font-weight: 700px;
@@ -122,7 +142,16 @@ h2 {
     .progress-bar {
         width: 100%;
     }
-    
-    
+    .bubble-speech {
+        top: 100px;
+        left: 120px;
+    }
+    .box::after {
+        border-left: 0;
+        border-top: 0;
+    }
+    .box {
+        border-bottom-right-radius: 5px;
+    }
     
 }
